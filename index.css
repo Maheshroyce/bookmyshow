@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.box {
+  background: #111;
+  padding: 20px;
+  width: 150px;
+  margin: auto;
+  border-radius: 8px;
+}
+
+input, button {
+  width: 30%;
+  padding: 12px;
+  margin: 8px auto;
+  border: none;
+  border-radius: 4px;
+  display: block;
+  text-align: center;
+}
+
+button {
+  background: red;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+p span {
+  color: red;
+  cursor: pointer;
+}
+
+#signup {
+  display: none;
+}

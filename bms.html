@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BookMyShow – Home</title>
+  <link rel="stylesheet" href="bms.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="hamburger" id="hamburgerMenu" aria-label="Open menu" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="logo">book<span>my</span>show</div>
+      <div class="search">
+        <input type="text" placeholder="Search for Movies, Events, Plays, Sports and Activities">
+      </div>
+      <div class="location" onclick="openLocationModal()">Bengaluru ▼</div>
+      <button class="signin" onclick="openSigninModal()">Sign in</button>
+    </nav>
+    <div class="navlinks">
+      <a href="#" onclick="showSection('recommended1')">Movies</a>
+      <a href="#" onclick="showSection('')">Stream</a>
+      <a href="#" onclick="showSection('recommended2')">Events</a>
+      <a href="#" onclick="showSection('')">Plays</a>
+      <a href="#" onclick="showSection('')">Sports</a>
+      <a href="#" onclick="showSection('recommended3')">Activities</a>
+    </div>
+  <!-- </header>
+
+  <aside class="side-menu" id="sideMenu" aria-hidden="true">
+    <div class="side-menu-header">
+      <h2>Hey!</h2>
+      <button class="close-btn" id="closeSideMenu" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="side-menu-content">
+      <div class="special-offers">
+        <span>Unlock special offers & great benefits</span>
+        <button class="login-register-btn">Login / Register</button>
+      </div>
+      <ul class="menu-list">
+        <li><button class="menu-item">Notifications <span class="arrow">›</span></button></li>
+        <li class="disabled">Your Orders <br><small>View all your bookings & purchases</small></li>
+        <li class="disabled">Stream Library <br><small>Rented & Purchased Movies</small></li>
+        <li><button class="menu-item">Play Credit Card <span class="arrow">›</span></button></li>
+        <li><button class="menu-item">Help & Support <span class="arrow">›</span></button></li>
+        <li class="disabled">Accounts & Settings <br><small>Location, Payments, Permissions & More</small></li>
+        <li><button class="menu-item">Rewards <span class="arrow">›</span></button></li>
+        <li><button class="menu-item">BookAChange <span class="arrow">›</span></button></li>
+      </ul>
+    </div>
+  </aside> -->
+  
+  <div class="banner">
+    <img src="thala utsav.avif" class="slide">
+    <img src="festival.avif" class="slide">
+    <img src="carbooking.png" class="slide">
+
+    <button class="prev" onclick="showSlide(-1)">&#10094;</button>
+    <button class="next" onclick="showSlide(1)">&#10095;</button>
+  </div>
+
+  <section class="recommended" id="recommended1">
+    <button class="movie-prev hidden" onclick="showMovieGroup(-1, 'recommended1')">‹</button>
+    <h2>Recommended Movies</h2>
+    <button class="movie-next" onclick="showMovieGroup(1, 'recommended1')">›</button>
+    <div class="movies-row">
+
+      <div class="movie-card group1">
+        <img src="hanuman.jpg">
+        <span class="title">HanuMan</span>
+        <span class="genre">Superhero / Fantasy / Action</span>
+        <div class="movie-actions">
+          <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 700
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 500
+          </span>
+        </div>
+      </div>
+
+      <div class="movie-card group1">
+        <img src="animal.jpg">
+        <span class="title">Animal</span>
+        <span class="genre">Drama/Action</span>
+        <div class="movie-actions">
+          <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 650
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 450
+          </span>
+        </div>
+      </div>
+
+      <div class="movie-card group1">
+        <img src="hii nanna.webp">
+        <span class="title">Hi Nanna</span>
+        <span class="genre">Romance/Drama</span>
+        <div class="movie-actions">
+          <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 720
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 480
+          </span>
+        </div>
+      </div>
+
+      <div class="movie-card group1">
+        <img src="moonu.jpg">
+        <span class="title">Moonu</span>
+        <span class="genre">Romantic Drama/Mystery/Thriller</span>
+        <div class="movie-actions">
+          <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 680
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 420
+          </span>
+        </div>
+      </div>
+
+      <div class="movie-card group1">
+        <img src="Rajarani.jpg">
+        <span class="title">Raja Rani</span>
+        <span class="genre">Romantic Comedy/Drama</span>
+        <div class="movie-actions">
+          <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 750
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 510
+          </span>
+        </div>
+      </div>
+
+      <div class="movie-card group2">
+        <img src="ssd.webp">
+        <span class="title">Sapta Sagaralu Dhaati</span>
+        <span class="genre">Romantic Drama/Poetic/Emotional</span>
+        <div class="movie-actions">
+          <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 600
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 400
+          </span>
+        </div>
+      </div>
+
+      <div class="movie-card group2">
+        <img src="sita ramam.avif">
+        <span class="title">Sita Ramam</span>
+        <span class="genre">Period Romance / Drama</span>
+        <div class="movie-actions">
+          <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 550
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 350
+          </span>
+        </div>
+      </div>
+
+      <div class="movie-card group2">
+        <img src="nsr.webp">
+        <span class="title">Naa Saami Ranga</span>
+        <span class="genre">Period Action Drama / Family Drama</span>
+        <div class="movie-actions">
+          <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 650
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 450
+          </span>
+        </div>
+      </div>
+
+      <div class="movie-card group2">
+        <img src="gita govindham.webp">
+        <span class="title">Gita Govindham</span>
+        <span class="genre">Romantic Comedy / Drama</span>
+        <div class="movie-actions">
+          <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 700
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 500
+          </span>
+        </div>
+      </div>
+
+      <div class="movie-card group2">
+        <img src="radhe shyam.webp">
+        <span class="title">Radhe Shyam</span>
+        <span class="genre">Period Romantic Fantasy / Drama</span>
+        <div class="movie-actions">
+          <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 550
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 350
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="recommended" id="recommended3">
+    <button class="movie-prev hidden" onclick="showMovieGroup(-1, 'recommended3')">‹</button>
+    <h2>Laughter Therapy</h2>
+    <button class="movie-next" onclick="showMovieGroup(1, 'recommended3')">›</button>
+    <div class="movies-row">
+
+      <div class="movie-card group1">
+        <img src="lt1.avif">
+        <span class="title">Karunesh Talwar Live</span>
+        <span class="genre">Fan Park,Phoenix Mall of Asia</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 700
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 500
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group1">
+        <img src="lt2.avif">
+        <span class="title">Karunesh Talwar Live</span>
+        <span class="genre">Basava Samithi Bengaluru</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 650
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 450
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group1">
+        <img src="lt3.avif">
+        <span class="title">Max Amini-Bengaluru</span>
+        <span class="genre">Good Shepherd Auditorium</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 720
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 480
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group1">
+        <img src="lt4.avif">
+        <span class="title">Rajasekhar Mamidan</span>
+        <span class="genre">Kaavu:Bengaluru</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 680
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 420
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group1">
+        <img src="lt5.avif">
+        <span class="title">Samay Raina</span>
+        <span class="genre">Good Shepherd Auditorium</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 750
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 510
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group2">
+        <img src="lt6.avif">
+        <span class="title">Survivor's Guilt</span>
+        <span class="genre">St.Jhon's Auditorium</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 600
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 400
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group2">
+        <img src="lt7.avif">
+        <span class="title">Prashanti Singh Live</span>
+        <span class="genre">Good Shepherd Auditorium</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 550
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 350
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group2">
+        <img src="lt8.avif">
+        <span class="title">The Niroop Mohan Show</span>
+        <span class="genre">Global Malls</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 650
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 450
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group2">
+        <img src="lt9.avif">
+        <span class="title">Banger Issues ft.Kaustubh</span>
+        <span class="genre">The comedy Theatre</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 700
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 500
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group2">
+        <img src="lt10.avif">
+        <span class="title">Daily Ka Kaam Hai By Aakas</span>
+        <span class="genre">MLR Convention Center</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 550
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 350
+          </span> -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="recommended" id="recommended2">
+    <button class="movie-prev hidden" onclick="showMovieGroup(-1, 'recommended2')">‹</button>
+    <h2>Popular Events</h2>
+    <button class="movie-next" onclick="showMovieGroup(1, 'recommended2')">›</button>
+    <div class="movies-row">
+
+      <div class="movie-card group1">
+        <img src="pe1.avif">
+        <span class="title">Samay Raina-Still Alive</span>
+        <span class="genre">Good Shepherd Auditorium</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 700
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 500
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group1">
+        <img src="pe2.avif">
+        <span class="title">Sangamam Thaala Utsav</span>
+        <span class="genre">St.Jhon's Auditorium</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 650
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 450
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group1">
+        <img src="pe3.avif">
+        <span class="title">Nirali-Hanchikw 2025</span>
+        <span class="genre">Prabath Kaladwaraka Auditorium</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 720
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 480
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group1">
+        <img src="pe4.avif">
+        <span class="title">October Octaves 2025</span>
+        <span class="genre">Prestige Center for Performing Arts</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 680
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 420
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group1">
+        <img src="pe5.avif">
+        <span class="title">Bajabies Pre-Diwali Candle</span>
+        <span class="genre">Jagriti Theatre Whitefield</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 750
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 510
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group2">
+        <img src="pe6.avif">
+        <span class="title">Make your own Pizza</span>
+        <span class="genre">Small World</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 600
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 400
+          </span> -->
+        </div>
+      </div>
+
+      <div class="movie-card group2">
+        <img src="pe7.avif">
+        <span class="title">Thiruolam</span>
+        <span class="genre">Phoenix market City, Whitefield</span>
+        <div class="movie-actions">
+          <!-- <span class="like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.94-10-8.02C-1.5 7.92 3.36 2 8.5 5.1 10.86 6.78 12 9 12 9s1.14-2.22 3.5-3.9C20.64 2 25.5 7.92 22 12.98 19.5 16.06 12 21 12 21z"/></svg> 550
+          </span>
+          <span class="vote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h4V9H2v12zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v9c0 1.1.9 2 2 2h7c.83 0 1.54-.5 1.84-1.22L22 11z"/></svg> 350
+          </span> -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="modal" id="locationModal">
+      <div class="movie-card group1">
+    <div class="modal-content">
+      <input type="text" placeholder="Search for your city">
+      <button onclick="detectLocation()">Detect my location</button>
+      <div class="popular-cities">
+        <span>Mumbai</span>
+        <span>Delhi-NCR</span>
+        <span>Bengaluru</span>
+        <span>Hyderabad</span>
+        <span>Chandigarh</span>
+        <span>Ahmedabad</span>
+        <span>Pune</span>
+        <span>Chennai</span>
+        <span>Kolkata</span>
+        <span>Kochi</span>
+      </div>
+      <button onclick="closeLocationModal()">Close</button>
+    </div>
+  </div>
+
+  <div class="modal" id="signinModal">
+    <div class="modal-content">
+      <h3>Sign In</h3>
+      <form id="signinForm">
+        <input type="email" id="emailInput" placeholder="Enter your email" required>
+        <input type="password" id="passwordInput" placeholder="Enter your password" required>
+      </form>
+      <div class="button-container">
+        <button type="button" onclick="closeSigninModal()">Close</button>
+        <button type="submit" form="signinForm">Sign In</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="bms.js"></script>
+</body>
+</html>
